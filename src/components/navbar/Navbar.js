@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
-  const user = false;
+  const user = true;
   return (
     <div className='nav'>
         <div className='navbarLeft'>
