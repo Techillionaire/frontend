@@ -1,8 +1,21 @@
 import './singlePost.css';
-
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 
 const SinglePost = () => {
+    const location = useLocation();
+    const path = location.pathname.split('/')[2];
+    const [post, setPost] = useState();
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            const res = await axios.get("/posts/" + path);
+            setPost(res.data);
+            console.log(res.data);
+        };
+        fetchPost();
+    }, [path])
   return (
     <div className='singlePost'>
         <div className='singlePostWrapper'>
