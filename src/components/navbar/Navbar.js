@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className='navbarRight'>
           {
             user ? (
-              <img src='https://pbs.twimg.com/profile_images/1343512939286962176/-3l_lPkO_400x400.jpg' className='topImg' alt='' />
+              <img src={user.displayPicture} className='topImg' alt='' />
             ) : (
               <ul className='topList'>
                 <li className='topListItems'>
