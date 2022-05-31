@@ -11,10 +11,12 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
+  const { user } = useContext(Context);
 
-  const user = true;
   return (
   <BrowserRouter>
     <Navbar />
